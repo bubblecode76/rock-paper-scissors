@@ -1,0 +1,17 @@
+body{
+    background-color: #eed6bf;
+   background: linear-gradient(#deadb0, #666ea1);
+   background-repeat: no-repeat;
+   background-attachment: fixed;
+}
+h1{
+    text-align: center;
+    /*background: linear-gradient(
+        to left, #deadb0, #666ea1 );/*#faa7b8, #6096fd
+        background-clip: text;
+        color: transparent;
+        -webkit-background-clip: text;*/
+    color: #efddd3;
+    font-size: 50px;
+    
+}
