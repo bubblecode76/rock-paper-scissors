@@ -1,9 +1,12 @@
+@import url('https://fonts.googleapis.com/css2?family=Parisienne&display=swap');
+
 body{
     background-color: #eed6bf;
    background: linear-gradient(#deadb0, #666ea1);
    background-repeat: no-repeat;
    background-attachment: fixed;
 }
+
 h1{
     text-align: center;
     /*background: linear-gradient(
@@ -14,4 +17,43 @@ h1{
     color: #efddd3;
     font-size: 50px;
     
+}
+
+.inst{
+    font-family: 'Parisienne';
+    color: #efddd3;
+    font-size: 50px;
+    text-align: center;
+    margin: 10px;
+}
+
+#list{
+    color: #efddd3;
+    margin-bottom: 40px;
+}
+
+#list p{
+    margin: 5px;
+}
+
+.scores{
+    display: flex;
+    margin: auto;
+    justify-content:center ;
+    text-align: center;
+    color: #efddd3;
+    font-size: 20px;
+}
+
+.scores hr{
+    margin: 20px;
+}
+.yourScore{
+    margin-right: 0px;
+    
+}
+
+.images{
+    text-align: center;
+    margin-top: 50px;
 }
