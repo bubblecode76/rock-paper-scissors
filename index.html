@@ -7,7 +7,7 @@
     <title>A Game of Rock Paper Scissor</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source Serif 4">    
-    <script src="script.js"></script>
+    <script src="script.js" defer></script>
 </head>
 <body>
     <h1 style="font-family: 'Source Serif 4';">R O C K &nbsp;&nbsp;  P A P E R &nbsp;&nbsp;  S C I S S O R</h1>
@@ -18,6 +18,7 @@
         <p> ‣ Paper WINS against Rock and LOSES against Scissor</p>
         <p> ‣ Rock WINS against Scissor and LOSES against Paper</p>
         <p> ‣ Scissor WINS against Paper and LOSES against Rock</p>
+        <p> ‣ The first one to reach 5 points wins the game</p>
     </div>
 
     <p class="inst" style="margin-bottom: 0px;">Scoreboard</p>
@@ -27,14 +28,14 @@
     <div class="scores" style="font-family: 'Source Serif 4';">
         <div class="yourScore">
             <p> &emsp;&emsp; YOU</p>
-            <p> &emsp;&emsp; 0</p>
+            <p> &emsp;&emsp; <span  id="yourRealScore">0</span></p>
         </div>
 
         <hr>
 
         <div class="compScore">
             <p>COMPUTER</p>
-            <p>0</p>
+            <div id="compRealScore">0</div>
         </div>
     </div>
 

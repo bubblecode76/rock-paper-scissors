@@ -63,4 +63,5 @@ h1{
 .images{
     text-align: center;
     margin-top: 50px;
+    cursor: pointer;
 }
