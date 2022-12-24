@@ -6,18 +6,19 @@ const paper=document.querySelector('#paper');
 const scissor=document.querySelector('#scissor');
 const yourScoreUpdate=document.querySelector('#yourRealScore');
 const compScoreUpdate=document.querySelector('#compRealScore');
+const result=document.querySelector('#result');
+result.style.display="none";
+const playAgain=document.querySelector('#playAgain');
+playAgain.style.display="none";
 
 
 function computerPlay(){
     const choice=Math.floor(Math.random()*3);
-    //console.log(choice);
     computerChoice=options[choice];
-    //console.log(computerChoice);
     return computerChoice;
 }
 
 function playRound(playerSelection,computerSelection){
-    //playerSelection=playerSelection.toLowerCase();
     if((playerSelection=='rock' && computerSelection=='rock')||(playerSelection=='scissor' && computerSelection=='scissor')||(playerSelection=='paper' && computerSelection=='paper'))
        return 0;
     else if((playerSelection=='rock' && computerSelection=='paper'))
@@ -35,15 +36,6 @@ function playRound(playerSelection,computerSelection){
     else
        return "Invalid Input"
 }
-
-/*function game(){
-    for(let i=0;i<5;i++){
-        //playerSelection = prompt("Enter your choice");
-        const computerSelection = computerPlay();
-        console.log(playRound(playerSelection, computerSelection));
-    }
-    
-}*/
 
 
 rock.addEventListener('click', e => {
@@ -81,10 +73,52 @@ function playGame(){
       console.log("Player's Score="+playerScore+" Computer's Score="+computerScore);
 
       if(playerScore==5){
-         console.log("YAY!YOU WIN!!");
+         result.style.display="block";
+         playAgain.style.display="block";
+         result.innerHTML="YAY!YOU WIN!!";
+         playAgain.innerHTML="DO YOU WANT TO PLAY AGAIN?";
+         const button = document.createElement("button");
+         button.innerHTML="TRY AGAIN";
+         document.getElementById("replayButton").appendChild(button);
+         rock.style.display="none";
+         paper.style.display="none";
+         scissor.style.display="none";
+         button.addEventListener('click',e => {
+            button.style.display="none";
+            result.style.display="none";
+            playAgain.style.display="none";
+            rock.style.display="inline";
+            paper.style.display="inline";
+            scissor.style.display="inline";
+            playerScore=0;
+            computerScore=0;
+            compScoreUpdate.innerHTML=parseInt(compScoreUpdate.innerHTML)*0;
+            yourScoreUpdate.innerHTML=parseInt(yourScoreUpdate.innerHTML)*0;
+         });
       }
       if(computerScore==5){
-         console.log("SORRY!YOU LOST!!");
+         result.style.display="block";
+         playAgain.style.display="block";
+         result.innerHTML="SORRY!YOU LOST!!";
+         playAgain.innerHTML="DO YOU WANT TO PLAY AGAIN?";
+         const button = document.createElement("button");
+         button.innerHTML="TRY AGAIN";
+         document.getElementById("replayButton").appendChild(button);
+         rock.style.display="none";
+         paper.style.display="none";
+         scissor.style.display="none";
+         button.addEventListener('click',e => {
+            button.style.display="none";
+            result.style.display="none";
+            playAgain.style.display="none";
+            rock.style.display="inline";
+            paper.style.display="inline";
+            scissor.style.display="inline";
+            playerScore=0;
+            computerScore=0;
+            compScoreUpdate.innerHTML=parseInt(compScoreUpdate.innerHTML)*0;
+            yourScoreUpdate.innerHTML=parseInt(yourScoreUpdate.innerHTML)*0;
+         });
       }
 }
 
